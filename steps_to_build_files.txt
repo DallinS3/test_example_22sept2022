@@ -1,0 +1,12 @@
+open folder in VS code
+
+Create .NET project
+dotnet new console
+dotnet new gitignore
+
+(ctrl + shift + P --> generate "debug" assets)
+
+.vscode folder --> launch.json file
+	"console": "integratedTerminal",
+	"internalConsoleOptions": "neverOpen",
+
