@@ -10,3 +10,75 @@ dotnet new gitignore
 	"console": "integratedTerminal",
 	"internalConsoleOptions": "neverOpen",
 
+=======================================================================
+
+FROM TEACHER:
+
+using System;
+using System.Collections.Generic;
+
+namespace MyApp // Note: actual namespace depends on the project name.
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // Create a list of strings
+            List<string> names = new List<string>();
+            names.Add("Bob");
+            names.Add("Bill");
+            names.Add("Sue");
+            // Display each item in the list
+            names.ForEach(name => Console.Write(name + " "));
+                        // Create another list, this time with some initial
+                        // entries.
+            string aString = "a";
+            List<string> stuff = new List<string> { aString, "b", "c", "d" };
+            
+            // char is different from string. Single quotes instead of double quotes
+            char aSingleCharacter = 'a';
+            Console.WriteLine($"This is a single character: {aSingleCharacter}");
+            
+            // Use a function to add two numbers together
+            int x = 5;
+            int y = 7;
+            int result = Adder(x, y); // 12
+            int result2 = Adder(10, 46); // 56
+            Console.WriteLine($"{x} + {y} = {result}");
+            Console.WriteLine($"10 + 46 = {result2}");
+        } // end of Main
+                
+        // Create a function
+        static int Adder(int a, int b)
+        {
+            return a + b;
+        }     
+    }
+}
+
+=======================================================================
+
+FROM TA:
+
+Setting Up New Program
+
+1. Set up dotnet
+	dotnet new console
+	dotnet new gitignore
+
+	(Ctrl+Shift+P -> .NET Generate Assets)
+
+2. Set up gitignore
+	change console to "console": "integratedTerminal",
+	add "internalConsoleOptions": "neverOpen",
+3. github
+	Click the Publish to Github button in the github tab
+	
+	git status
+	git add <name of file>
+	git status
+	git commit -m "Update Message Here"
+	git status
+	git push
+
+========================================================================
